@@ -9,9 +9,9 @@ const int INF=0x3f3f3f3f;
 const int MAXN=100001;
 
 struct qnode{
-	int v,c;				//v代表起点，c代表当前路径长 
+	int v,c;					//v代表起点，c代表当前路径长 
 	qnode(int _v=0,int _c=0):v(_v),c(_c){}
-	bool operator < (const qnode &r) const
+	bool operator < (const qnode &r) const	//重载来排序优先队列 
 	{
 		return c>r.c;
 	}

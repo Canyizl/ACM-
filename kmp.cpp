@@ -23,7 +23,7 @@ void kmp(char* text,char* p,int* next)
 	len_t=strlen(text);
 	len_p=strlen(p);
 	q=s=0;
-	
+	// q表示上次迭代匹配了多少字符，s表示从总字符的第几位开始 
 	while(s<len_t){
 		for(q=next[q];q<len_p&&p[q]==text[s];q++,s++);
 		if(q==0)s++;

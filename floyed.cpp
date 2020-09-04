@@ -9,7 +9,7 @@ void floyed(int N)
 		for(int j=1;j<=N;j++)
 			for(int k=1;k<=N;k++)
 				if(D[i][k]+D[k][j]<D[i][j])
-					D[j][i]=D[i][j]=D[i][k]+D[k][j];
+					D[j][i]=D[i][j]=D[i][k]+D[k][j]; //D[j][i]=D[i][j] 可以减少复杂度 
 }
 
 int main()
@@ -24,11 +24,12 @@ int main()
 	
 	for(int i=1;i<=N;i++)
 		for(int j=1;j<=N;j++)
-			if(i!=j) D[i][j]=10000;
-	for(int i=1;i<=M;i++)
+			if(i!=j) D[i][j]=10000;	//初始化
+			 
+	for(int i=1;i<=M;i++)	//存入初始信息 
 	{
 		x=e[i-1][0];y=e[i-1][1];
-		D[x][y]=D[y][x]=e[i-1][2];
+		D[x][y]=D[y][x]=e[i-1][2];	
 	}
 	floyed(N);
 	cout<<D[1][4];
