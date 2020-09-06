@@ -10,7 +10,7 @@ int dp[1001];
 	for(int i=1;i<=n/2;i++)
 		result+=dp(i);
 	return result;
-} */
+} 此题用递归会TLE */
 
 int main()
 {
