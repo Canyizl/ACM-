@@ -49,6 +49,7 @@ int Search(Trie *root,char *s)
 
 int main()
 {
+	##基于hdu 1251 统计题
 	Trie *root = NewTrie();
 	root->num=0;
 	while(gets(s1)&&strcmp(s1,"")!=0)  
