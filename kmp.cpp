@@ -29,14 +29,15 @@ void kmp(char* text,char* p,int* next)
 		if(q==0)s++;
 		else if (q==len_p){
 			cout<<"匹配成功，在原文的第"<<s-len_p+1<<"处开始。"<<endl; 
+	//		q=0; 加上则为不可重叠 
 		}
 	}
 }
 
 int main()
 {
-	char p[]="ca";
-	char text[]="cacca";
+	char p[]="cac";
+	char text[]="cacaca";
 
 	getNext(next,p);
 	kmp(text,p,next);
